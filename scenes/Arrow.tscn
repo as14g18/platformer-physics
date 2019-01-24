@@ -17,7 +17,7 @@ animations = [ {
 "speed": 3.0
 } ]
 
-[node name="Arrow" type="AnimatedSprite"]
+[node name="Arrow" type="AnimatedSprite" index="0"]
 
 frames = SubResource( 1 )
 animation = "Charge"

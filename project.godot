@@ -44,4 +44,5 @@ ui_throw_grenade=[ Object(InputEventKey,"resource_local_to_scene":false,"resourc
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"

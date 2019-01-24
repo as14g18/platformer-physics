@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://art/scifi_platformTiles_16x16.png" type="Texture" id=1]
+
+[node name="SciFiTiles" type="Node" index="0"]
+
+[node name="scifi_platformTiles_16x16" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+

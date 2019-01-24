@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://art/tile035.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://art/tile040.png" type="Texture" id=19]
 [ext_resource path="res://art/tile041.png" type="Texture" id=20]
 [ext_resource path="res://scenes/Arrow.tscn" type="PackedScene" id=21]
+[ext_resource path="res://art/sky1.png" type="Texture" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -96,5 +97,58 @@ scale = Vector2( 0.7, 0.4 )
 z_index = -1
 offset = Vector2( 80, 7 )
 _sections_unfolded = [ "Offset", "Transform", "Visibility", "Z Index" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="3"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Smoothing" ]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="4"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer" index="0"]
+
+texture = ExtResource( 22 )
+centered = false
+_sections_unfolded = [ "Offset" ]
 
 

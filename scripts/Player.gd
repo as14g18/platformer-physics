@@ -22,7 +22,7 @@ func charge_grenade():
 func throw_grenade():
 	$Sprite.play("Grenade")
 	var clone = GRENADE_SCENE.instance()
-	clone.start(position, grenade_charge, get_viewport().get_mouse_position())
+	clone.start(position, grenade_charge, get_global_mouse_position())
 	get_parent().add_child(clone)
 	grenade_charge = 0
 	throw_grenade = false
